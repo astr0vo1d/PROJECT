@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzalia</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            height: 100%;
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+            padding-left: 10px;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex: 1;
+        }
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+        .hero-text {
+            max-width: 500px;
+            padding: 20px;
+        }
+        .hero-image {
+            flex: 1;
+            background: url('banner.jpg') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            position: relative;
+        }
+        .menu-section {
+            padding: 40px 0;
+        }
+        .menu-item {
+            margin-bottom: 30px;
+        }
+        .menu-item img {
+            width: 70%; /* Adjusted to make the images smaller */
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+        .about-contact {
+            padding: 40px 0;
+        }
+        .about, .contact {
+            padding: 20px;
+        }
+        .footer {
+            background: #343a40;
+            color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+        .btn-primary {
+            background-color: #D04A02;
+            border-color: #D04A02;
+        }
+        .btn-primary:hover {
+            background-color: #B63E01;
+            border-color: #B63E01;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>P I Z Z A L I A</h2>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-text">
+                <h1 class="display-4">Discover the Flavor of Authentic Pizza</h1>
+                <p class="lead">Experience the taste of Italy with Pizzalia. Savor the rich flavors and fresh ingredients in our expertly crafted pizzas.</p>
+                <a href="#menu" class="btn btn-primary btn-lg">Order Now</a>
+            </div>
+            <div class="hero-image"></div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <h2 class="text-center mb-4">Our Menu</h2>
+            <div class="row">
+                <div class="col-md-6 menu-item">
+                    <img src="margherita.jpg" alt="Margherita Pizza">
+                    <h4>Margherita Pizza</h4>
+                    <p>A classic favorite, topped with fresh mozzarella, basil, and tomatoes.</p>
+                </div>
+                <div class="col-md-6 menu-item">
+                    <img src="pepperoni.jpg" alt="Pepperoni Pizza">
+                    <h4>Pepperoni Pizza</h4>
+                    <p>Loaded with pepperoni and cheese, a true crowd-pleaser.</p>
+                </div>
+                <div class="col-md-6 menu-item">
+                    <img src="veggie.jpg" alt="Veggie Pizza">
+                    <h4>Veggie Pizza</h4>
+                    <p>A fresh and colorful mix of seasonal vegetables on a crispy crust.</p>
+                </div>
+                <div class="col-md-6 menu-item">
+                    <img src="bbqchicken.jpg" alt="BBQ Chicken Pizza">
+                    <h4>BBQ Chicken Pizza</h4>
+                    <p>Tangy BBQ sauce, grilled chicken, and red onions, all on a crispy base.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-contact">
+            <div class="about">
+                <h2>About Us</h2>
+                <p>Pizzalia was founded with a passion for delivering the most authentic and delicious pizza experience to our community. We use only the freshest ingredients, and our skilled chefs prepare each pizza with love and care.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="about-contact">
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Pizzalia. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
